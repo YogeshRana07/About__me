@@ -90,7 +90,7 @@
 
             <label class="label" for="name" >USER NAME --></label>
             <input class="input" id="name" type="text" placeholder="Enter the User name" value=""><br>
-            <span id="username" class="text-danger font-weight-bold"></span>
+            <span id="username"></span>
             
             <i class="fa fa-key fa-2x" aria-hidden="true"></i>
             <label class="label" for="pass">PASSWORD --></label>
@@ -109,11 +109,14 @@
         <script type="text/javascript">
             function validation(){
     var user=document.getElementById("name").value;
- if(user=="")
+ if(user==" ")
      {
          document.getElementById("username").innerHTML="Please Enter Your Name";
          return false;
      }
+                else{
+                    return true;
+                }
 }
             
         </script>
