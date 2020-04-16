@@ -108,10 +108,10 @@
         </div>
         <script type="text/javascript">
             function validation(){
-    var user=document.getElementById("name").value;
- if(user.trim()==" ")
+    var user=document.getElementById("name").innerHTML;
+ if(user.value.trim()==" ")
      {
-        return document.getElementById("username").innerHTML="Please Enter Your Name";
+        document.getElementById("username").innerHTML="Please Enter Your Name";
          return false;
      }
                 else{
