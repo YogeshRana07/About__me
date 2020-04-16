@@ -90,37 +90,56 @@
 
             <label class="label" for="name" >USER NAME --></label>
             <input class="input" id="name" type="text" placeholder="Enter the User name" value=""><br>
-            <div id="username"></div>
+            <p id="usern" style="border:1px solid red color:red;"></p>
             
             <i class="fa fa-key fa-2x" aria-hidden="true"></i>
             <label class="label" for="pass">PASSWORD --></label>
             <input class="input" id="pass" type="password" class="form-control"placeholder="Enter the Password" value=""><br>
-                
+                 <p id="userna" style="border:1px solid red color:red;"></p>
                 
             <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i> 
-                    <label class="label" for="mail">EMAIL ID --></label>
+            <label class="label" for="mail">EMAIL ID --></label>
             <input class="input" id="mail" type="email" placeholder="Enter the email id" value=""><br>
-                
+                 <p id="usernam" style="border:1px solid red color:red;"></p>
 
-            <input class="btn"type="submit" value="LOGIN" onclick="validation()" formaction="Homepage.html">
+            <input class="btn"type="submit" value="LOGIN" formaction="Homepage.html">
          
         </form>
         </div>
-        <script type="text/javascript">
+        <script>
             function validation(){
-                var text;
-    var user=document.getElementById("name").innerHTML.value();
- if(user.trim()==" ")
+    var user=document.getElementById("name").innerHTML.value;
+ if(user ==" ")
      {
-         text="Please fill the User Name";
-         alert("Please fill the User Name");
+                   document.getElementById("usern").innerHTML="Please fill the box";
          return false;
      }
                 else{
                     return true;
-                    text="Fill next";
                 }
-                document.getElementById("username").innerHTML=text;
+                
+                
+    var passw=document.getElementById("pass").innerHTML.value;
+ if(passw ==" ")
+     {
+                   document.getElementById("userna").innerHTML="Please fill the box";
+         return false;
+     }
+                else{
+                    return true;
+                }
+                
+                
+    var email=document.getElementById("email").innerHTML.value;
+ if(email ==" ")
+     {
+                   document.getElementById("usernam").innerHTML="Please fill the box";
+         return false;
+     }
+                else{
+                    return true;
+                }
+      
 }
             
         </script>
