@@ -108,15 +108,19 @@
         </div>
         <script type="text/javascript">
             function validation(){
-    var user=document.getElementById("name").innerHTML;
- if(user.value.trim()==" ")
+                var text;
+    var user=document.getElementById("name").innerHTML.value();
+ if(user.trim()==" ")
      {
-        document.getElementById("username").innerHTML="Please Enter Your Name";
+         text="Please fill the User Name";
+         alert("Please fill the User Name");
          return false;
      }
                 else{
                     return true;
+                    text="Fill next";
                 }
+                document.getElementById("username").innerHTML=text;
 }
             
         </script>
